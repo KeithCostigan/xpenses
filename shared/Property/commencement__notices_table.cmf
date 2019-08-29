@@ -1,0 +1,271 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<!-- salt:add4878c-c1f7-4136-9856-c8993639a3ab -->
+<metadata name="commencement_notices" path="/shared/Property/commencement_notices" type="TABLE" subtype="SQL_TABLE" changeToken="0" tableType="VIEW">
+  <columns>
+    <column name="Local Authority" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="2014" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="2015" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="2016" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="2017" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="2018" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="2019" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="One_off (2014)" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="3" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="4" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="5" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="6" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+    <column name="7" nullable="true">
+      <datatype type="STRING" maxLength="50"/>
+      <security>
+        <owner user="admin" domain="composite"/>
+      </security>
+    </column>
+  </columns>
+  <indexes></indexes>
+  <foreignKeys></foreignKeys>
+  <security>
+    <owner user="admin" domain="composite"/>
+  </security>
+  <dependency target="/shared/Property/Housing_Starts/Housing_Starts/dbo/Housing_Starts" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Local Authority">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2014">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2015">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2016">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2017">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2018">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2019">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <dependency target="/shared/Property/One_Off_Homes/One_Off_Homes/dbo/One_Off" type="TABLE">
+    <datatype type="TABLE" refId="1">
+      <element name="Local Authority">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2014">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2015">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2016">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2017">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2018">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+      <element name="2019">
+        <datatype type="STRING" maxLength="50"/>
+      </element>
+    </datatype>
+  </dependency>
+  <attribute name="SQL" type="STRING">SELECT 
+    Housing_Starts.&quot;Local Authority&quot;, 
+    Housing_Starts.&quot;2014&quot;, 
+    Housing_Starts.&quot;2015&quot;, 
+    Housing_Starts.&quot;2016&quot;, 
+    Housing_Starts.&quot;2017&quot;, 
+    Housing_Starts.&quot;2018&quot;, 
+    Housing_Starts.&quot;2019&quot;, 
+    One_Off.&quot;2014&quot; &quot;One_off (2014)&quot;, 
+    One_Off.&quot;2015&quot; &quot;3&quot;, 
+    One_Off.&quot;2016&quot; &quot;4&quot;, 
+    One_Off.&quot;2017&quot; &quot;5&quot;, 
+    One_Off.&quot;2018&quot; &quot;6&quot;, 
+    One_Off.&quot;2019&quot; &quot;7&quot;
+FROM      
+    /shared/Property/Housing_Starts/Housing_Starts/dbo/Housing_Starts Housing_Starts INNER JOIN 
+        /shared/Property/One_Off_Homes/One_Off_Homes/dbo/One_Off One_Off
+    ON Housing_Starts.&quot;Local Authority&quot; = One_Off.&quot;Local Authority&quot;</attribute>
+  <attribute name="creationDate" type="LONG">1565774172855</attribute>
+  <attribute name="creatorUserDomain" type="STRING">composite</attribute>
+  <attribute name="creatorUserId" type="INTEGER">-1973</attribute>
+  <attribute name="creatorUserName" type="STRING">admin</attribute>
+  <attribute name="explicitly.designed" type="BOOLEAN">false</attribute>
+  <attribute name="impactLevel" type="INTEGER">0</attribute>
+  <attribute name="impactMessage" type="NULL"/>
+  <attribute name="lastModifiedDate" type="LONG">1565775266643</attribute>
+  <attribute name="lastModifiedUserDomain" type="STRING">composite</attribute>
+  <attribute name="lastModifiedUserId" type="INTEGER">-1973</attribute>
+  <attribute name="lastModifiedUserName" type="STRING">admin</attribute>
+  <attribute name="model" type="BYTE_ARRAY">EIEJBAAAAAMQUQYBAA4ASABvAHUAcwBpAG4AZwBfAFMAdABhAHIAdABzBgIADgBIAG8AdQBzAGkA
+bgBnAF8AUwB0AGEAcgB0AHMDC/////8DCgABrskDDP////8LEQAGAAYAcwBoAGEAcgBlAGQACABQ
+AHIAbwBwAGUAcgB0AHkADgBIAG8AdQBzAGkAbgBnAF8AUwB0AGEAcgB0AHMADgBIAG8AdQBzAGkA
+bgBnAF8AUwB0AGEAcgB0AHMAAwBkAGIAbwAOAEgAbwB1AHMAaQBuAGcAXwBTAHQAYQByAHQAc///
+EFEGAQAHAE8AbgBlAF8ATwBmAGYGAgAHAE8AbgBlAF8ATwBmAGYDC/////8DCgABrtQDDP////8L
+EQAGAAYAcwBoAGEAcgBlAGQACABQAHIAbwBwAGUAcgB0AHkADQBPAG4AZQBfAE8AZgBmAF8ASABv
+AG0AZQBzAA0ATwBuAGUAXwBPAGYAZgBfAEgAbwBtAGUAcwADAGQAYgBvAAcATwBuAGUAXwBPAGYA
+Zv//EFMGCQAFAEkATgBOAEUAUgMNAAAAAAMOAAAAAQgPEGIGBwABAD0BBQAIAxBBBgEADwBMAG8A
+YwBhAGwAIABBAHUAdABoAG8AcgBpAHQAeQYCAAAGA///BgT//wMK/////wMLAAAAAP//CAQQQQYB
+AA8ATABvAGMAYQBsACAAQQB1AHQAaABvAHIAaQB0AHkGAgAABgP//wYE//8DCv////8DCwAAAAH/
+//////8DBQAAAAEIAhAxBgH//wECAQEGAAEDAAEEAAEFAAMHAAAAAAcJAAAAAQAAAAIJCgAAAA0Q
+QQYBAA8ATABvAGMAYQBsACAAQQB1AHQAaABvAHIAaQB0AHkGAgAABgP//wYE//8DCv////8IDBAb
+BgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgANQAwACkDKwAAAA8DEgAAAAEE
+BAAAAAAAAAAyARMB//8DCwAAAAD//xBBBgEABAAyADAAMQA0BgIAAAYD//8GBP//Awr/////CAwQ
+GwYCAAcAdgBhAHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEAcgAoADUAMAApAysAAAAPAxIAAAAB
+BAQAAAAAAAAAMgETAf//AwsAAAAA//8QQQYBAAQAMgAwADEANQYCAAAGA///BgT//wMK/////wgM
+EBsGAgAHAHYAYQByAGMAaABhAHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAA
+AQQEAAAAAAAAADIBEwH//wMLAAAAAP//EEEGAQAEADIAMAAxADYGAgAABgP//wYE//8DCv////8I
+DBAbBgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgANQAwACkDKwAAAA8DEgAA
+AAEEBAAAAAAAAAAyARMB//8DCwAAAAD//xBBBgEABAAyADAAMQA3BgIAAAYD//8GBP//Awr/////
+CAwQGwYCAAcAdgBhAHIAYwBoAGEAcgYDAAsAdgBhAHIAYwBoAGEAcgAoADUAMAApAysAAAAPAxIA
+AAABBAQAAAAAAAAAMgETAf//AwsAAAAA//8QQQYBAAQAMgAwADEAOAYCAAAGA///BgT//wMK////
+/wgMEBsGAgAHAHYAYQByAGMAaABhAHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMS
+AAAAAQQEAAAAAAAAADIBEwH//wMLAAAAAP//EEEGAQAEADIAMAAxADkGAgAABgP//wYE//8DCv//
+//8IDBAbBgIABwB2AGEAcgBjAGgAYQByBgMACwB2AGEAcgBjAGgAYQByACgANQAwACkDKwAAAA8D
+EgAAAAEEBAAAAAAAAAAyARMB//8DCwAAAAD//xBBBgEABAAyADAAMQA0BgIADgBPAG4AZQBfAG8A
+ZgBmACAAKAAyADAAMQA0ACkGA///BgT//wMK/////wgMEBsGAgAHAHYAYQByAGMAaABhAHIGAwAL
+AHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAADIBEwH//wMLAAAAAf//
+EEEGAQAEADIAMAAxADUGAgABADMGA///BgT//wMK/////wgMEBsGAgAHAHYAYQByAGMAaABhAHIG
+AwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAADIBEwH//wMLAAAA
+Af//EEEGAQAEADIAMAAxADYGAgABADQGA///BgT//wMK/////wgMEBsGAgAHAHYAYQByAGMAaABh
+AHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAADIBEwH//wML
+AAAAAf//EEEGAQAEADIAMAAxADcGAgABADUGA///BgT//wMK/////wgMEBsGAgAHAHYAYQByAGMA
+aABhAHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAADIBEwH/
+/wMLAAAAAf//EEEGAQAEADIAMAAxADgGAgABADYGA///BgT//wMK/////wgMEBsGAgAHAHYAYQBy
+AGMAaABhAHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAAADIB
+EwH//wMLAAAAAf//EEEGAQAEADIAMAAxADkGAgABADcGA///BgT//wMK/////wgMEBsGAgAHAHYA
+YQByAGMAaABhAHIGAwALAHYAYQByAGMAaABhAHIAKAA1ADAAKQMrAAAADwMSAAAAAQQEAAAAAAAA
+ADIBEwH//wMLAAAAAf////8JBgAAAAMQggMKAAAA9AMLAAABDQMMAAAAyAMNAAAAkv//EIIDCgAA
+Ax0DCwAAASgDDAAAAMgDDQAAAJL//xCCAwr/////Awv/////Awz/////Aw3///////8IAxBxAwEA
+AAALAwIAAAAyCQMAAAImEHQDBgAAAAD//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAAAf//EHIGBP////8QcwMF
+AAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+AwYAAAAC//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAP//xByBgT/////EHMDBQAAAAD//xB1AQcB//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAMGAAAABP//EHIGBP////8Q
+cwMFAAAAAP//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb/
+/xB0AwYAAAAF//8QcgYE/////xBzAwUAAAAA//8QdQEHAf//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAb//xByBgT/////EHMDBQAAAAD//xB1AQcB//8Q
+eAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdAYJABkATwBuAGUAXwBP
+AGYAZgAuACIATABvAGMAYQBsACAAQQB1AHQAaABvAHIAaQB0AHkAIv//EHIGBP////8QcwMFAAAA
+Af//EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYA
+AAAH//8QcgYEAA4ATwBuAGUAXwBvAGYAZgAgACgAMgAwADEANAAp//8QcwMFAAAAAf//EHUBBwH/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYAAAAI//8QcgYE
+AAEAM///EHMDBQAAAAH//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//
+EHb//xB2//8QdAMGAAAACf//EHIGBAABADT//xBzAwUAAAAB//8QdQEHAf//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHQDBgAAAAr//xByBgQAAQA1//8QcwMFAAAA
+Af//EHUBBwH//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0AwYA
+AAAL//8QcgYEAAEANv//EHMDBQAAAAH//xB1AQcB//8QeAYL/////xB3Awr///////8QeQYM////
+/xB2//8Qdv//EHb//xB2//8QdAMGAAAADP//EHIGBAABADf//xBzAwUAAAAB//8QdQEHAf//EHgG
+C/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1
+AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP//
+//8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0
+//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2
+//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2
+//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5
+Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK
+////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL
+/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUB
+BwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE////
+/xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT/
+/xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb/
+/xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb/
+/xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkG
+DP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/
+//////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/
+////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEH
+AP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////
+EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//
+EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//
+EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//
+EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM
+/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv//
+/////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC///
+//8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA
+//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Q
+c///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8Q
+cgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Q
+dv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Q
+dv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/
+////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////
+////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL////
+/xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD/
+/xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz
+//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv//EHT//xBy
+BgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr///////8QeQYM/////xB2//8Qdv//EHb//xB2
+//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////EHcDCv///////xB5Bgz/////EHb//xB2
+//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//EHgGC/////8QdwMK////////EHkGDP//
+//8Qdv//EHb//xB2//8Qdv//EHT//xByBgT/////EHP//xB1AQcA//8QeAYL/////xB3Awr/////
+//8QeQYM/////xB2//8Qdv//EHb//xB2//8QdP//EHIGBP////8Qc///EHUBBwD//xB4Bgv/////
+EHcDCv///////xB5Bgz/////EHb//xB2//8Qdv//EHb//xB0//8QcgYE/////xBz//8QdQEHAP//
+EHgGC/////8QdwMK////////EHkGDP////8Qdv//EHb//xB2//8Qdv///////w==</attribute>
+  <attribute name="resourceModifiedDateOnSourceCISSite" type="LONG">1565774172855</attribute>
+</metadata>
